@@ -1,9 +1,10 @@
 {
   "Prefix": "/e",
   "Admins": [
-    "BickDeaq",
-    "Player1",
-    12345678
+    7471050868, 
+    8908879836, 
+    2243688386,
+    "Player1"
   ],
   "Webhooks": {
     "CommandLog": "https://media.guilded.gg/webhooks/06c455f9-9ea1-4497-b854-ffe50fe591ac/FmpBenjt60q8AEesCcwqscY2OoE842i6Wuu28K6mcsC4Ai2sSIUeWO6qc8EyIaGMAu0OA26kOYsSg8cuOyqSMm",
