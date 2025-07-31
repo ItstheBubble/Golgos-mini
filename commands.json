@@ -1,1 +1,60 @@
-
+{
+  "Prefix": "/e",
+  "Admins": [
+    1, 
+    7471050868,
+    "YourUsernameHere"
+  ],
+  "Webhooks": {
+    "CommandLog": "https://media.guilded.gg/webhooks/...",
+    "ServerStart": "https://media.guilded.gg/webhooks/..."
+  },
+  "Presets": {
+    "kill": {
+      "description": "Kills the target's character.",
+      "steps": [
+        "setprop target.Character.Humanoid.Health 0"
+      ]
+    },
+    "heal": {
+      "description": "Heals the target's character.",
+      "steps": [
+        "run target.Character.Humanoid TakeDamage -1000000"
+      ]
+    },
+    "speed": {
+      "description": "Changes the target's walkspeed.",
+      "steps": [
+        "setprop target.Character.Humanoid.WalkSpeed $1"
+      ]
+    },
+    "bring": {
+      "description": "Teleports the target to the executor.",
+      "steps": [
+        "run target.Character PivotTo executor.Character:GetPivot"
+      ]
+    },
+    "fling": {
+        "description": "Flings the target with high velocity.",
+        "steps": [
+            "new LinearVelocity target.Character.HumanoidRootPart",
+            "setprop target.Character.HumanoidRootPart.LinearVelocity.MaxForce 1000000",
+            "setprop target.Character.HumanoidRootPart.LinearVelocity.VectorVelocity 0,500,0",
+            "wait 0.2",
+            "destroy target.Character.HumanoidRootPart.LinearVelocity"
+        ]
+    },
+    "m": {
+      "description": "Sends a global server message.",
+      "steps": [
+        "hint all [SERVER]: $1"
+      ]
+    },
+    "shutdown": {
+      "description": "Kicks all players from the server.",
+      "steps": [
+        "run game.Players.GetPlayers Kick Server is shutting down."
+      ]
+    }
+  }
+}
