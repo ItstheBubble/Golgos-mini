@@ -32,7 +32,7 @@
     "bring": {
       "description": "Teleports the target to the executor.",
       "steps": [
-        "run target.Character PivotTo executor.Character:GetPivot"
+        "run target.Character PivotTo executor_pivot"
       ]
     },
     "fling": {
