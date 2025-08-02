@@ -39,6 +39,7 @@
         "description": "Flings the target with high velocity.",
         "steps": [
             "new LinearVelocity target.Character.HumanoidRootPart",
+            "wait 0.1",
             "setprop target.Character.HumanoidRootPart.LinearVelocity.MaxForce 1000000",
             "setprop target.Character.HumanoidRootPart.LinearVelocity.VectorVelocity Vector3(0,500,0)",
             "wait 0.2",
