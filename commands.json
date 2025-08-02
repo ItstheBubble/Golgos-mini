@@ -39,8 +39,8 @@
         "description": "Flings the target with high velocity.",
         "steps": [
             "new LinearVelocity target.Character.HumanoidRootPart",
-            "setprop target.Character.HumanoidRootPart.LinearVelocity.MaxForce 1000000",
-            "setprop target.Character.HumanoidRootPart.LinearVelocity.VectorVelocity 0,500,0",
+            "setprop target.Character.HumanoidRootPpart.LinearVelocity.MaxForce 1000000",
+            "setprop target.Character.HumanoidRootPart.LinearVelocity.VectorVelocity Vector3(0,500,0)",
             "wait 0.2",
             "destroy target.Character.HumanoidRootPart.LinearVelocity"
         ]
@@ -54,7 +54,7 @@
     "shutdown": {
       "description": "Kicks all players from the server.",
       "steps": [
-        "run game.Players.GetPlayers Kick Server is shutting down."
+        "runonall game.Players.GetPlayers Kick Server is shutting down."
       ]
     }
   }
