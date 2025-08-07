@@ -35,27 +35,26 @@
         "run target.Character PivotTo executor_pivot"
       ]
     },
-    "fling": {
-        "description": "Flings the target with high velocity.",
-        "steps": [
-            "new LinearVelocity target.Character.HumanoidRootPart",
-            "wait 0.1",
-            "setprop target.Character.HumanoidRootPart.LinearVelocity.MaxForce 1000000",
-            "setprop target.Character.HumanoidRootPart.LinearVelocity.VectorVelocity Vector3(0,500,0)",
-            "wait 0.2",
-            "destroy target.Character.HumanoidRootPart.LinearVelocity"
-        ]
-    },
     "m": {
       "description": "Sends a global server message.",
       "steps": [
         "hint all [SERVER]: $1"
       ]
     },
-    "shutdown": {
-      "description": "Kicks all players from the server.",
+    "fling": {
+      "description": "Y-axis launch using AssemblyLinearVelocity (no attachments needed).",
       "steps": [
-        "runonall game.Players.GetPlayers Kick Server is shutting down."
+        // ➊ stop any momentum so the fling is consistent
+        "setprop target.Character.HumanoidRootPart.AssemblyLinearVelocity Vector3(0,0,0)",
+        // ➋ give the punch
+        "setprop target.Character.HumanoidRootPart.AssemblyLinearVelocity Vector3(0,120,0)"
+      ]
+    },
+    
+    "shutdown": {
+      "description": "Kicks everyone with a single-argument reason.",
+      "steps": [
+        "runonall game.Players.GetPlayers Kick \"Server is shutting down.\""
       ]
     }
   }
