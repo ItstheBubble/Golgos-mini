@@ -44,9 +44,9 @@
     "fling": {
       "description": "Y-axis launch using AssemblyLinearVelocity (no attachments needed).",
       "steps": [
-        // ➊ stop any momentum so the fling is consistent
+        
         "setprop target.Character.HumanoidRootPart.AssemblyLinearVelocity Vector3(0,0,0)",
-        // ➋ give the punch
+        
         "setprop target.Character.HumanoidRootPart.AssemblyLinearVelocity Vector3(0,120,0)"
       ]
     },
